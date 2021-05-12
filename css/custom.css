@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  height: 6vh;
+}
+
+.navbar a {
+  color: #fff !important;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content, .sidenav {
+  height: 88vh;
+}
+
+.row.content {
+  background-image: url("../img/bkgd.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row.content .overlay {
+  background-color: rgba(84, 163, 24, 0.522);
+  width: 100%;
+}
+
+.lyrics {
+  
+}
+
+h1 {
+  font-family: 'Indie Flower', cursive !important;
+  text-align: center !important;
+  margin: 20px;
+  color: #ffff;
+  padding-bottom: 50px;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555 !important;
+  color: white !important;
+  padding: 15px !important;
+  height: 6vh;
+}
+
+footer p {
+  margin-bottom: 0;
+}

@@ -1,0 +1,36 @@
+[11-May-2021 23:10:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:12:16 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:14:34 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:14:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:15:28 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:21:25 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:26:25 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:27:23 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:28:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:33:14 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:34:39 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:34:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 14
+[11-May-2021 23:35:25 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 15
+[11-May-2021 23:36:29 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'samlcar2_samcarne'@'198.91.95.2' (using password: YES) in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 3
+[11-May-2021 23:39:57 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'samlcar2_samcarne'@'198.91.95.2' (using password: YES) in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 3
+[11-May-2021 23:41:28 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 15
+[11-May-2021 23:42:58 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:55 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:55 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:55 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:55 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:23:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 01:28:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 02:27:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 02:27:05 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 20:20:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 20:24:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
+[12-May-2021 20:25:32 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/samlcar2/public_html/game_night/lyricsquiz/ajax/getGameLyrics.php on line 16
