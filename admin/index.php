@@ -1,19 +1,16 @@
-<?php require 'config.php'; 
-$b_url = BASEURLGAME;
-?>
-
+<?php require '../config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Guess the Song from the LYRICS ONLY | Game Night by Sam Carne | samcarne.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/custom.css">
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/custom.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/gameplay.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/admin.js"></script>
 </head>
 <body>
 
@@ -34,9 +31,11 @@ $b_url = BASEURLGAME;
 <article class="container-fluid text-center">
   <div class="row content">
 	  <div class="overlay">
-		  <div class="questionBoxGame">
+		  <div class="questionBoxAdmin">
 			  <div class="lyrics">
 				  <p></p>
+				  <button>click for a song</button>
+				  
 			  </div>
 		  </div>
 	  </div>
@@ -46,6 +45,7 @@ $b_url = BASEURLGAME;
 <footer class="container-fluid text-center">
   <p>Copyrights © 2020 Sam Carne. All Rights Reserved.</p>
 </footer>
+
 
 </body>
 </html>

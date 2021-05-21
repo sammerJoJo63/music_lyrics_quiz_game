@@ -32,10 +32,23 @@ body {
 .row.content .overlay {
   background-color: rgba(84, 163, 24, 0.522);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lyrics {
-  
+  background: #fff;
+  padding: 15px;
+}
+
+.lyrics p {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.lyrics button {
+  margin: 0 0 15px 0;
 }
 
 h1 {
