@@ -33,9 +33,17 @@
 	  <div class="overlay">
 		  <div class="questionBoxAdmin">
 			  <div class="lyrics">
-				  <p></p>
-				  <button>click for a song</button>
-				  
+				  <p class="songPara"></p>
+				  <p class="timerPara"><progress value="0" max="15" id="progressBar"></progress></p>
+				  <p class="answerPara">
+					  <span class="title"></span>
+					  <br><br>
+					  <span class="artist"></span>
+					  <br><br>
+				  </p>
+				  <button class="song">click for a song</button>
+				  <button class="timer">start timer</button>
+				  <button class="answer">show answer</button>
 			  </div>
 		  </div>
 	  </div>
@@ -43,7 +51,7 @@
 </article>
 
 <footer class="container-fluid text-center">
-  <p>Copyrights © 2020 Sam Carne. All Rights Reserved.</p>
+  <p>Copyrights © <?php echo date("Y"); ?> Sam Carne. All Rights Reserved.</p>
 </footer>
 
 

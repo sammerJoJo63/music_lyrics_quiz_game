@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require '../config.php';
 
 $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME);
 if (!$conn) {

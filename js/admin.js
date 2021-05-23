@@ -1,17 +1,26 @@
 $(document).ready(function() {
+    
+  $.ajax({
+    type: "POST",
+    url: '../ajax/cleanGameAnswer.php',
+    //data: {'id': id},
+    success: function(result) {  
+      //do stuff
+    }
+  });
   //SONG IDs  
-  var songID = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50];
+  const N = 50;
+  let songID = Array.from({length: N}, (_, index) => index + 1);
   
   
-  
-  $(".questionBoxAdmin .lyrics button").click(function() {
+  $(".questionBoxAdmin .lyrics button.song").click(function() {
     songID.sort(function(a, b){return 0.5 - Math.random()});
     var id = songID[0];
     songID.shift();
-    
+        
     $.ajax({
       type: "GET",
-      url: '../ajax/cleanGame.php',
+      url: '../ajax/cleanGameLyrics.php',
       data: {'id': id},
       success: function(result) {
     
@@ -29,14 +38,19 @@ $(document).ready(function() {
                 alert("No more songs! Good game!");
               }
             }
-            $(".questionBoxAdmin .lyrics p").html(results[0]["lyrics"] + "<br><br>");
-            
+            $(".questionBoxAdmin .lyrics p.songPara").html(results[0]["lyrics"] + "<br><br>");
+            $(".questionBoxAdmin .lyrics button.timer").show();
+            $(".questionBoxAdmin .lyrics button.song").hide();     
+            $(".questionBoxAdmin .lyrics p.answerPara").hide();       
             $.ajax({
               type: "GET",
-              url: '../ajax/setActive.php',
+              url: '../ajax/setActiveLyrics.php',
               data: {'id': id},
               success: function(result) {
-                //do stuff 
+                
+                clickForTimer()
+                clickForAnswer(id);
+                
               } // end success to set active ajax call
             }); // end set active ajax call
             
@@ -46,9 +60,80 @@ $(document).ready(function() {
         
         
       } // end success to clean game ajax call
-    }); // end clean game ajax call
+    }); // end clean game ajax call  
+  
+});
+
+function clickForTimer() {
+  $(".questionBoxAdmin .lyrics button.timer").click(function() {
+    $(".questionBoxAdmin .lyrics p.timerPara").show();
+    $(".questionBoxAdmin .lyrics button.timer").hide();
+    var timeleft = 15;
+    var downloadTimer = setInterval(function(){
+      if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        $(".questionBoxAdmin .lyrics button.answer").show();
+        $(".questionBoxAdmin .lyrics p.timerPara").hide();
+        $(".questionBoxAdmin .lyrics p.timerPara progress").attr("value","0");
+      }
+      document.getElementById("progressBar").value = 15 - timeleft;
+      timeleft -= 1;
+    }, 1000);
+  });
+} 
+  
+function clickForAnswer (identifyer) {
+  $(".questionBoxAdmin .lyrics button.answer").click(function() {
+    $.ajax({
+      type: "POST",
+      url: '../ajax/cleanGameAnswer.php',
+      //data: {'id': id},
+      success: function(result) {  
+        //do stuff
+      }
+    });
     
-    
-  }); // end click event
+    $.ajax({
+      type: "GET",
+      url: '../ajax/cleanGameLyrics.php',
+      data: {'id': identifyer},
+      success: function(result) {  
+        
+        $.ajax({
+          type: "GET",
+          url: '../ajax/getGameArtistTitle.php',
+          data: {'id': identifyer},
+          success: function(result) {
+            
+            $(".questionBoxAdmin .lyrics button.song").show();
+            $(".questionBoxAdmin .lyrics button.answer").hide();
+            document.getElementById("progressBar").value = 0
+            var results;
+            results = JSON.parse(result);
+
+            $(".questionBoxAdmin .lyrics p.answerPara").show();
+            $(".questionBoxAdmin .lyrics p.answerPara .title").html(results[0]["title"]);
+            $(".questionBoxAdmin .lyrics p.answerPara .artist").html(results[0]["artist"]);       
+          
+            $.ajax({
+              type: "GET",
+              url: '../ajax/setActiveAnswer.php',
+              data: {'id': identifyer},
+              success: function(result) {
+                //do stuff 
+              } // end success to set active answer ajax call
+            }); // end set active answer ajax call
+            
+          } // end success to title, artist ajax call
+        }); // end get title, artist ajax call
+                        
+      } // end success to clean game ajax call
+    }); // end clean game ajax call  
+        
+  }); // end answer click event
+ 
+}
+  
+  
 }); //end doc ready
 

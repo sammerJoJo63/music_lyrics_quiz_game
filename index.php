@@ -36,7 +36,12 @@ $b_url = BASEURLGAME;
 	  <div class="overlay">
 		  <div class="questionBoxGame">
 			  <div class="lyrics">
-				  <p></p>
+			  		<p class="songParaGame"></p>
+					<p class="timerPara"><progress value="0" max="15" id="progressBar"></progress></p>
+					<p class="answerParaGame">
+						<span class="title"></span>
+						<span class="artist"></span>
+					</p>
 			  </div>
 		  </div>
 	  </div>
@@ -44,7 +49,7 @@ $b_url = BASEURLGAME;
 </article>
 
 <footer class="container-fluid text-center">
-  <p>Copyrights © 2020 Sam Carne. All Rights Reserved.</p>
+  <p>Copyrights © <?php echo date("Y"); ?> Sam Carne. All Rights Reserved.</p>
 </footer>
 
 </body>

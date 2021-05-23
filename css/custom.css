@@ -51,6 +51,17 @@ body {
   margin: 0 0 15px 0;
 }
 
+.lyrics p.timerPara,
+.lyrics p.answerPara,
+.lyrics button.timer,
+.lyrics button.answer {
+  display: none;
+}
+
+#progressBar {
+  margin-bottom: 35px;
+}
+
 h1 {
   font-family: 'Indie Flower', cursive !important;
   text-align: center !important;
