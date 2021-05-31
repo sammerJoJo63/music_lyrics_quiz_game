@@ -7,7 +7,6 @@ if (!$conn) {
 }
 
 $tablename = TABLENAME;
-
 $id = $_GET['id'];
 $sql = "SELECT title, artist FROM $tablename WHERE id = $id";
 

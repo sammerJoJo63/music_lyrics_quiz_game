@@ -3,7 +3,8 @@ require '../config.php';
 
 $mysqli = new mysqli(HOST, USERNAME, PASSWORD, DBNAME);
 
-$r = $mysqli->query("SELECT * FROM lyrics_quiz WHERE shown = 1");
+$tablename = TABLENAME;
+$r = $mysqli->query("SELECT * FROM $tablename WHERE shown = 1");
 
 $currLyric = array();
 if (mysqli_num_rows($r) > 0) {
@@ -18,6 +19,6 @@ if (mysqli_num_rows($r) > 0) {
   echo "0 results";
 }
 
-mysqli_close($conn);
+$mysqli->close();
 
 ?>

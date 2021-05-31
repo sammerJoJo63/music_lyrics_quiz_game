@@ -1,14 +1,10 @@
 <?php
 require '../config.php';
 
-$conn = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME);
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+$mysqli = new mysqli(HOST, USERNAME, PASSWORD, DBNAME);
 
 $tablename = TABLENAME;
-$sql = "UPDATE $tablename SET answer_shown = 0 WHERE answer_shown = 1";
-$result = mysqli_query($conn, $sql);
+$result = $mysqli->query("UPDATE $tablename SET answer_shown = 0 WHERE answer_shown = 1");
 
-mysqli_close($conn);
+$mysqli->close();
 ?>

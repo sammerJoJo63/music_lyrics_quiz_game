@@ -7,9 +7,8 @@ if (!$conn) {
 }
 
 $tablename = TABLENAME;
-
 $id = $_GET['id'];
-$sql = "SELECT lyrics FROM $tablename WHERE id = $id";
+$sql = "SELECT id, lyrics FROM $tablename WHERE id = $id";
 
 $result = mysqli_query($conn, $sql);
 $q = array();

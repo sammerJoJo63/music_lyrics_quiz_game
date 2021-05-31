@@ -8,6 +8,16 @@ $(document).ready(function() {
       //do stuff
     }
   });
+  
+  $.ajax({
+    type: "POST",
+    url: '../ajax/cleanGameTimer.php',
+    //data: {'id': id},
+    success: function(result) {  
+      //do stuff
+    }
+  });
+  
   //SONG IDs  
   const N = 50;
   let songID = Array.from({length: N}, (_, index) => index + 1);
@@ -38,17 +48,20 @@ $(document).ready(function() {
                 alert("No more songs! Good game!");
               }
             }
-            $(".questionBoxAdmin .lyrics p.songPara").html(results[0]["lyrics"] + "<br><br>");
+            
+            $(".questionBoxAdmin .lyrics p.songPara").show().html(results[0]["lyrics"]);
             $(".questionBoxAdmin .lyrics button.timer").show();
             $(".questionBoxAdmin .lyrics button.song").hide();     
-            $(".questionBoxAdmin .lyrics p.answerPara").hide();       
+            $(".questionBoxAdmin .lyrics p.answerPara").hide();  
+            $(".questionBoxAdmin .lyrics").attr("songID", results[0]["id"]);
+                 
             $.ajax({
               type: "GET",
               url: '../ajax/setActiveLyrics.php',
               data: {'id': id},
               success: function(result) {
                 
-                clickForTimer()
+                clickForTimer(id);
                 clickForAnswer(id);
                 
               } // end success to set active ajax call
@@ -64,22 +77,40 @@ $(document).ready(function() {
   
 });
 
-function clickForTimer() {
+function clickForTimer(identifyer) {
   $(".questionBoxAdmin .lyrics button.timer").click(function() {
     $(".questionBoxAdmin .lyrics p.timerPara").show();
     $(".questionBoxAdmin .lyrics button.timer").hide();
-    var timeleft = 15;
+    var timeleft = 10;
     var downloadTimer = setInterval(function(){
       if(timeleft <= 0){
         clearInterval(downloadTimer);
         $(".questionBoxAdmin .lyrics button.answer").show();
         $(".questionBoxAdmin .lyrics p.timerPara").hide();
         $(".questionBoxAdmin .lyrics p.timerPara progress").attr("value","0");
+        $.ajax({
+          type: "POST",
+          url: '../ajax/cleanGameTimer.php',
+          //data: {'id': id},
+          success: function(result) {  
+            //do stuff
+          }
+        });
       }
-      document.getElementById("progressBar").value = 15 - timeleft;
+      document.getElementById("progressBar").value = 10 - timeleft;
+      $.ajax({
+        type: "GET",
+        url: '../ajax/setActiveTimer.php',
+        data: {'id': identifyer, 'timer': timeleft},
+        success: function(result) {  
+          //console.log(result);
+          // do stuff
+        }
+      });
       timeleft -= 1;
     }, 1000);
   });
+  
 } 
   
 function clickForAnswer (identifyer) {
@@ -89,20 +120,27 @@ function clickForAnswer (identifyer) {
       url: '../ajax/cleanGameAnswer.php',
       //data: {'id': id},
       success: function(result) {  
-        //do stuff
+        $.ajax({
+          type: "POST",
+          url: '../ajax/cleanGameTimer.php',
+          //data: {'id': id},
+          success: function(result) {  
+            //do stuff
+          }
+        });
       }
     });
-    
+
     $.ajax({
       type: "GET",
       url: '../ajax/cleanGameLyrics.php',
       data: {'id': identifyer},
       success: function(result) {  
-        
+        var ident = $(".questionBoxAdmin .lyrics").attr("songID");
         $.ajax({
           type: "GET",
           url: '../ajax/getGameArtistTitle.php',
-          data: {'id': identifyer},
+          data: {'id': ident},
           success: function(result) {
             
             $(".questionBoxAdmin .lyrics button.song").show();

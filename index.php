@@ -36,12 +36,12 @@ $b_url = BASEURLGAME;
 	  <div class="overlay">
 		  <div class="questionBoxGame">
 			  <div class="lyrics">
-			  		<p class="songParaGame"></p>
-					<p class="timerPara"><progress value="0" max="15" id="progressBar"></progress></p>
-					<p class="answerParaGame">
-						<span class="title"></span>
-						<span class="artist"></span>
-					</p>
+		  		<p class="songParaGame"></p>
+				<p class="timerPara"><progress value="0" max="10" id="progressBar"></progress></p>
+				<p class="answerParaGame">
+					<span class="title"></span>
+					<span class="artist"></span>
+				</p>
 			  </div>
 		  </div>
 	  </div>

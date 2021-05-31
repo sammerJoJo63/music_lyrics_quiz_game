@@ -34,12 +34,10 @@
 		  <div class="questionBoxAdmin">
 			  <div class="lyrics">
 				  <p class="songPara"></p>
-				  <p class="timerPara"><progress value="0" max="15" id="progressBar"></progress></p>
+				  <p class="timerPara"><progress value="0" max="10" id="progressBar"></progress></p>
 				  <p class="answerPara">
 					  <span class="title"></span>
-					  <br><br>
 					  <span class="artist"></span>
-					  <br><br>
 				  </p>
 				  <button class="song">click for a song</button>
 				  <button class="timer">start timer</button>
