@@ -22,7 +22,7 @@
 	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		<div class="navbar-nav">
 		  <a class="nav-item nav-link" href="<?php BASEURL; ?>/fifthgrader/index.php">AYSTA5G?</a>
-		  <a class="nav-item nav-link" href="<?php BASEURL; ?>/jeopardy/jeopardy/index.php">JEOPARDY!</a>
+		  <!-- <a class="nav-item nav-link" href="<?php BASEURL; ?>/jeopardy/jeopardy/index.php">JEOPARDY!</a> -->
 		  <a class="nav-item nav-link active" href="<?php BASEURL; ?>/jeopardy/lyricsquiz/index.php">LYRICS QUIZ</a>
 		</div>
 	  </div>
